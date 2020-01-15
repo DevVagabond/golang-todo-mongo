@@ -6,5 +6,5 @@ import (
 
 func initiateToDoRoute(secureGroup *echo.Group) {
 	todoGroup := secureGroup.Group("/todo")
-	todoGroup.GET("/list",handlers.Hello)
+	todoGroup.GET("/list",handlers.List)
 }
