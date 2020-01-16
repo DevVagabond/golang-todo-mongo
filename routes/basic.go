@@ -1,13 +1,12 @@
 package routes
 
 import (
-	"golang-todo-mongo/handlers"
 	"github.com/labstack/echo"
+	"golang-todo-mongo/handlers"
 )
 
-func InitiateBasicRoute(e *echo.Echo, groupName string){
+func InitiateBasicRoute(e *echo.Echo, groupName string) {
 	g := e.Group(groupName)
-	g.GET("", handlers.Hello)
 	g.POST("/signup", handlers.Signup)
 	g.POST("/login", handlers.Login)
 
